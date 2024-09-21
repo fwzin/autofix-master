@@ -506,7 +506,7 @@
  * responsive for large than 575px screen
  */
 
-@media (min-width: 575px) {
+ @media (min-width: 575px) {
 
   /**
    * CUSTOM PROPERTY
@@ -521,13 +521,15 @@
     --fs-2: 4rem;
     --fs-3: 2.8rem;
     --fs-4: 2rem;
- 
+
   }
+
+
 
   /**
    * REUSED STYLE
    */
-  
+
   .container {
     max-width: 540px;
     width: 100%;
@@ -538,18 +540,22 @@
 
   .h2 { font-weight: var(--fw-700); }
 
+
+
   /**
    * HERO
    */
 
   .hero .container { max-width: unset; }
 
-  .hero-context {
-    max-width: 540px;
+  .hero-content {
+    max-width: 520px;
     margin-inline: auto;
   }
 
   .hero .section-text { font-size: 1.8rem; }
+
+
 
   /**
    * SERVICE
@@ -564,12 +570,34 @@
     margin-block-end: 40px;
   }
 
+  
+
+  /**
+   * ABOUT
+   */
+
+  .about-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .about-item { padding-block: 20px; }
+
+
+
+  /**
+   * WORK
+   */
+
+  .scrollbar-item { min-width: calc(50% - 15px); }
+
+
 
   /**
    * FOOTER
    */
 
-   .footer-top {
+  .footer-top {
     position: relative;
     overflow: hidden;
   }
@@ -582,13 +610,308 @@
     bottom: -30px;
     right: 0;
   }
+
 }
+
+
+
+
+
+/**
+ * responsive for large than 768px screen
+ */
+
+@media (min-width: 768px) {
+
+  /**
+   * CUSTOM PROPERTY
+   */
+
+  :root {
+
+    /**
+     * typography
+     */
+
+    --fs-1: 4rem;
+    --fs-2: 5rem;
+    --fs-3: 3.4rem;
+
+  }
+
+
+
+  /**
+   * REUSED STYLE
+   */
+
+  .container,
+  .hero-content { max-width: 720px; }
+
+  .btn { padding: 16px 32px; }
+
+  .section-subtitle { --fs-5: 1.8rem; }
+
+  .section-title:not(.h1) {
+    max-width: 500px;
+    margin-inline: auto;
+  }
+
+
+
+  /**
+   * HERO
+   */
+
+  .hero { --section-padding: 120px; }
+
+  .hero .section-text { margin-block-end: 30px; }
+
+
+
+  /**
+   * SERVICE
+   */
+
+  .service-banner {
+    display: block;
+    position: relative;
+  }
+
+  .service-list { grid-template-columns: repeat(3, 1fr); }
+
+  .service-banner img {
+    position: absolute;
+    top: 0;
+    left: -25%;
+    margin-block-start: 15%;
+    width: 150%;
+    transform-origin: top;
+  }
+
+
+
+  /**
+   * ABOUT
+   */
+   
+  .about-banner { max-width: max-content; }
+
+  .about-banner,
+  .about .section-text { margin-inline: auto; }
+
+  .about .section-text { max-width: 520px; }
+
+
+
+  /**
+   * FOOTER
+   */
+
+  .footer-top .container { grid-template-columns: 1fr 0.9fr 0.9fr; }
+
+  .copyright { --fs-6: 1.4rem; }
+
+}
+
+
+
+
+
+/**
+ * responsive for large than 992px screen
+ */
+
+@media (min-width: 992px) {
+
+  /**
+   * CUSTOM PROPERTY
+   */
+
+  :root {
+
+    /**
+     * typography
+     */
+
+    --fs-2: 4.4rem;
+    --fs-3: 3.8rem;
+    --fs-4: 2.2rem;
+
+    /**
+     * spacing
+     */
+
+    --section-padding: 100px;
+
+  }
+
+
+
+  /**
+   * REUSED STYLE
+   */
+
+  .container { max-width: 960px; }
+
+  .section-text,
+  .card-text { font-size: 1.8rem; }
+
+
+
+  /**
+   * HEADER
+   */
+
+  .nav-toggle-btn { display: none; }
+
+  .header .container { gap: 30px; }
+
+  .navbar,
+  .navbar.active {
+    all: unset;
+    display: block;
+    margin-inline-start: auto;
+  }
+
+  .navbar-list { display: flex; }
+
+  .navbar-link {
+    position: relative;
+    font-size: unset;
+  }
+
+  .navbar-link:is(:hover, :focus-visible) {
+    background: none;
+    color: var(--white);
+  }
+
+  .navbar-link::after {
+    content: url("../images/nav-before-img.png");
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+
+  .navbar-link:is(:hover, :focus-visible)::after { opacity: 1; }
+
+  .header .btn {
+    display: flex;
+    padding: 12px 24px;
+    font-size: var(--fs-5);
+  }
+
+
+
+  /**
+   * HERO
+   */
+
+  .hero {
+    text-align: left;
+    padding-block-end: 80px;
+  }
+
+  .hero .container {
+    max-width: 960px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero :is(.section-subtitle, .btn) { margin-inline: 0; }
+
+  .hero .section-title { text-align: left; }
+
+  .hero-banner img { width: 55%; }
+
+
+
+  /**
+   * SERVICE
+   */
+
+  .service-card .card-text {
+    padding-inline: 25px;
+    line-height: 1.45;
+    margin-block-end: 15px;
+  }
+
+  .service-list li:nth-child(-2n+3) { margin-block-start: 90px; }
+
+  .service-list li:nth-child(4) { margin-inline-end: 60px; }
+
+  .service-list li:nth-child(6) { margin-inline-start: 60px; }
+
+  .service-banner img {
+    left: -55%;
+    margin-block-start: -30%;
+    width: 210%;
+  }
+
+
+
+  /**
+   * ABOUT
+   */
+
+  .about {
+    position: relative;
+    z-index: 1;
+  }
+
+  .about,
+  .about .section-title { text-align: left; }
+
+  .about .container {
+    grid-template-columns: 1fr 0.75fr;
+    gap: 30px;
+  }
+
+  .about .section-subtitle { margin-inline: 0; }
+
+  .about-banner,
+  .about-banner .w-100 { margin-inline: auto 0; }
+
+  .about-banner .w-100 { width: 40%; }
+
+  .about-item { text-align: center; }
+
+  .about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-image: url('../images/about-abs-banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    z-index: -1;
+  }
+
+
+
+  /**
+   * WORK
+   */
+
+  .has-scrollbar { overflow-x: visible; }
+
+  .scrollbar-item { min-width: calc(33.33% - 20px); }
+
+}
+
+
+
+
 
 /**
  * responsive for large than 1200px screen
  */
 
- @media (min-width: 1200px) {
+@media (min-width: 1200px) {
 
   /**
    * CUSTOM PROPERTY
@@ -681,31 +1004,128 @@
     left: -41%;
   }
 
+
+
+  /**
+   * WORK
+   */
+
+  .work-card .card-btn {
+    font-size: 2.4rem;
+    width: 55px;
+    height: 55px;
+  }
+
+
+
   /**
    * FOOTER
    */
 
-   .footer-top { padding-block: 150px; }
+  .footer-top { padding-block: 150px; }
 
-   .footer-top .container { padding-inline-start: 25%; }
- 
-   .footer-bottom {
-     position: relative;
-     padding-block: 30px;
-     z-index: 1;
-   }
- 
-   .footer :is(.shape-1, .shape-2) {
-     display: block;
-     position: absolute;
-     bottom: 0;
-     width: 50%;
-     pointer-events: none;
-     z-index: -1;
-   }
- 
-   .footer .shape-1 { left: -100px; }
- 
-   .footer .shape-2 { left: -50px; }
- 
- }
+  .footer-top .container { padding-inline-start: 25%; }
+
+  .footer-bottom {
+    position: relative;
+    padding-block: 30px;
+    z-index: 1;
+  }
+
+  .footer :is(.shape-1, .shape-2) {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .footer .shape-1 { left: -100px; }
+
+  .footer .shape-2 { left: -50px; }
+
+}
+
+
+
+
+
+/**
+ * responsive for large than 1400px screen
+ */
+
+@media (min-width: 1400px) {
+
+  /**
+   * CUSTOM PROPERTY
+   */
+
+  :root {
+
+    /**
+     * typography
+     */
+
+    --fs-2: 6rem;
+
+    /**
+     * spacing
+     */
+
+    --section-padding: 140px;
+
+  }
+
+
+
+  /**
+   * REUSED STYLE
+   */
+
+  :is(.header, .hero) .container { max-width: 1280px; }
+
+  .section-subtitle::before {
+    height: 20px;
+    margin-inline-end: 5px;
+  }
+
+
+
+  /**
+   * HEADER
+   */
+
+  .header .btn { padding: 18px 36px; }
+
+
+
+  /**
+   * HERO
+   */
+
+  .hero { padding-block: 280px; }
+
+  .hero .section-text { padding-inline-end: 90px; }
+
+  .hero-banner img { width: 75%; }
+
+
+
+  /**
+   * ABOUT
+   */
+
+  .about::before { width: 55%; }
+
+  .about-banner .w-100 { width: 50%; }
+
+
+
+  /**
+   * FOOTER
+   */
+
+  .footer-top .container { padding-inline-start: 20%; }
+
+}
