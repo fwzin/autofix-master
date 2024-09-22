@@ -13,7 +13,7 @@
 
   Autofix is a fully responsive car service website, <br />Responsive for all devices, build using HTML, CSS, and JavaScript.
 
-  <a href="https://codewithsadee.github.io/autofix/"><strong>➥ Live Demo</strong></a>
+  <a href="https://fwzin.github.io/autofix-master/"><strong>➥ Live Demo</strong></a>
 
 </div>
 
