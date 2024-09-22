@@ -1,10 +1,11 @@
 <div align="center">
   
-  ![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/autofix)
-  ![GitHub stars](https://img.shields.io/github/stars/codewithsadee/autofix?style=social)
-  ![GitHub forks](https://img.shields.io/github/forks/codewithsadee/autofix?style=social)
-[![Twitter Follow](https://img.shields.io/twitter/follow/codewithsadee_?style=social)](https://twitter.com/intent/follow?screen_name=codewithsadee_)
-  [![YouTube Video Views](https://img.shields.io/youtube/views/DcTLSTbDXww?style=social)](https://youtu.be/DcTLSTbDXww)
+  ![GitHub repo size](https://img.shields.io/github/repo-size/fwzin/autofix-master)
+  ![GitHub stars](https://img.shields.io/github/stars/fwzin/autofix-master?style=social)
+  ![GitHub forks](https://img.shields.io/github/forks/fwzin/autofix-master?style=social)
+  [![Instagram Follow](https://img.shields.io/badge/Instagram-Follow-blue?style=social&logo=instagram)](https://www.instagram.com/chicodesenvolvedor/?hl=en)
+  [![LinkedIn Connect](https://img.shields.io/badge/LinkedIn-Connect-blue?style=social&logo=linkedin)](https://www.linkedin.com/in/francisco-costa-fw/)
+
 
   <br />
   <br />
