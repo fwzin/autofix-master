@@ -22,7 +22,7 @@
 
 ### Demo Screeshots
 
-![Autofix Desktop Demo](./readme-images/desktop.png "Desktop Demo")
+![Autofix Desktop Demo](readme-images/desktop.png "Desktop Demo")
 
 ### Prerequisites
 
